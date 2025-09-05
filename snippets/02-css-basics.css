@@ -1,0 +1,12 @@
+
+/* CSS Basics Example */
+:root { --bg: #f8fafc; --text: #111827; --accent: #2563eb; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, sans-serif; color: var(--text); background: var(--bg); }
+header { padding: 1rem; border-bottom: 1px solid #e5e7eb; }
+nav ul { list-style: none; display: flex; gap: 1rem; margin: 0; padding: 0; }
+nav a { text-decoration: none; color: var(--text); padding: .5rem .75rem; }
+nav a:hover, nav a:focus { background: #e5e7eb; border-radius: .375rem; }
+main { max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+.card { border: 1px solid #e5e7eb; padding: 1rem; border-radius: .5rem; background: white; }
+.card + .card { margin-top: 1rem; }

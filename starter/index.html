@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Web Foundations Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Stage 1: Add headings, paragraphs, lists, links, images, tables, and a form here -->
+  <!-- Stage 3: Replace generic wrappers with semantic tags (header, nav, main, footer) -->
+  <!-- Stage 5: Add components like carousel and mobile menu -->
+
+  <header class="site-header">
+    <h1>My Website</h1>
+    <nav class="site-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">☰ Menu</button>
+      <ul id="primary-menu" class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="home" tabindex="-1">
+    <section>
+      <h2>Welcome</h2>
+      <p>Start building! Follow the lesson tasks to progressively enhance this page.</p>
+    </section>
+    <section id="about">
+      <h2>About</h2>
+      <p>Write a short bio here.</p>
+    </section>
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="cards">
+        <!-- Add project cards here -->
+      </div>
+    </section>
+    <section id="contact">
+      <h2>Contact</h2>
+      <form id="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit">Send</button>
+        <p class="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; <span id="year"></span> My Website</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

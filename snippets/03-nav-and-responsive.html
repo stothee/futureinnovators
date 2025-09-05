@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nav & Responsive Example</title>
+  <style>
+    :root { --text:#111827; --bg:#f8fafc; }
+    body { margin:0; font-family: system-ui, sans-serif; color:var(--text); background:var(--bg); }
+    .container { max-width: 960px; margin: 0 auto; padding: 0 1rem; }
+    .site-header { position: sticky; top:0; background:#fff; border-bottom:1px solid #e5e7eb; }
+    .site-header .bar { display:flex; align-items:center; justify-content:space-between; padding: .75rem 0; }
+    .nav-toggle { display:none; }
+    .menu { display:flex; gap:1rem; list-style:none; padding:0; margin:0; }
+    .menu a { text-decoration:none; color:inherit; padding:.5rem .75rem; border-radius:.375rem; }
+    .menu a:hover, .menu a:focus { background:#e5e7eb; }
+    main { padding: 1.5rem 0; }
+
+    @media (max-width: 640px) {
+      .nav-toggle { display:inline-block; }
+      .menu { display:none; flex-direction:column; }
+      .menu.open { display:flex; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container bar">
+      <strong>My Site</strong>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="menu">☰</button>
+        <ul id="menu" class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <h1>Responsive Layout</h1>
+    <p>Resize the window to see the nav collapse.</p>
+  </main>
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', (e) => {
+      const btn = e.currentTarget;
+      const menu = document.getElementById('menu');
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
