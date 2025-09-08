@@ -4,7 +4,7 @@
 **Goal:** Style text, colours, and the box model. Build a simple navigation layout.
 
 ## Tasks
-1. Link `style.css` in `<head>` using `<link rel="stylesheet">`.
+1. Change the background colour of the navigation bar (remember to set classes!)
 2. Set base typography for `body` and create clear hierarchy for headings.
 3. Choose a colour palette for backgrounds and text; check contrast.
 4. Practice margin, padding, and border on a `card` or `section`.

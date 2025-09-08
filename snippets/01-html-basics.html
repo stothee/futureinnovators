@@ -1,42 +1,56 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>HTML Basics Example</title>
+  <title>My HTML Basics Page</title>
 </head>
 <body>
-  <h1>Welcome to My Site</h1>
-  <p>This is a paragraph with some <strong>emphasis</strong> and <em>italics</em>.</p>
+  <!-- Navigation bar with more links -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-  <h2>Lists</h2>
+  <!-- Headings and paragraphs -->
+  <h1 id="home">Welcome to My HTML Basics Page</h1>
+  <p>This page demonstrates the basics of HTML, including headings, lists, images, links, and forms.</p>
+
+  <h2 id="about">About Me</h2>
+  <p>Hello! My name is Alex. I am learning web development and love coding.</p>
+
+  <!-- Unordered list -->
+  <h3>My Hobbies</h3>
   <ul>
-    <li>Unordered item A</li>
-    <li>Unordered item B</li>
+    <li>Reading</li>
+    <li>Playing soccer</li>
+    <li>Drawing</li>
   </ul>
+
+  <!-- Ordered list -->
+  <h3>My Top 3 Goals</h3>
   <ol>
-    <li>Ordered item 1</li>
-    <li>Ordered item 2</li>
+    <li>Learn HTML</li>
+    <li>Build a website</li>
+    <li>Share my projects</li>
   </ol>
 
-  <h2>Links & Images</h2>
-  <p>Visit <a href="https://developer.mozilla.org/" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>.</p>
-  <img src="https://picsum.photos/400/200" alt="A random placeholder landscape" />
+  <!-- Image with alt -->
+  <img src="https://picsum.photos/400/200" alt="A colorful landscape with mountains and sky" />
 
-  <h2>Table</h2>
-  <table>
-    <caption>Simple Data</caption>
-    <thead>
-      <tr><th>Item</th><th>Value</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Apples</td><td>3</td></tr>
-      <tr><td>Oranges</td><td>5</td></tr>
-    </tbody>
-  </table>
+  <!-- External link -->
+  <p>Connect with me on <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>.</p>
 
-  <h2>Form</h2>
+  <h2 id="projects">Projects</h2>
+  <p>Coming soon!</p>
+
+  <h2 id="contact">Contact Me</h2>
   <form>
     <label for="name">Name</label>
     <input id="name" name="name" type="text" required />
@@ -44,10 +58,14 @@
     <label for="email">Email</label>
     <input id="email" name="email" type="email" required />
 
-    <label for="password">Password</label>
-    <input id="password" name="password" type="password" required />
+    <label for="message">Message</label>
+    <textarea id="message" name="message" required></textarea>
 
-    <button type="submit">Submit</button>
+    <!-- Another field added -->
+    <label for="age">Age</label>
+    <input id="age" name="age" type="number" min="1" max="120" />
+
+    <button type="submit">Send</button>
   </form>
 </body>
 </html>
