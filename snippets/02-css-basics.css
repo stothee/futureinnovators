@@ -63,3 +63,8 @@ button {
 button:hover {
 	background: #06b6d4;
 }
+
+/* 8. Add a border radius to your main container and other elements */
+nav a {
+    border-radius: 12px;
+}

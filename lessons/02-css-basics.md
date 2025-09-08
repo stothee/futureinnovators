@@ -10,6 +10,7 @@
 5. Add some space (padding) inside the navigation bar and between sections.
 6. Make the links in the navigation bar change color when you move your mouse over them.
 7. Make the button in the form a different color, and change color when you hover over it.
+8. Add a border radius to elements such as your form and your navigation buttons.
 
 ## Success Criteria
 - The background and text colors are different.
