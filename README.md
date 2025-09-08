@@ -8,27 +8,25 @@ A hands-on, step-by-step curriculum that teaches **HTML, CSS, and JavaScript** b
 
 ## Structure
 ```
-web-foundations/
-├─ starter/              # Empty project files students edit
-│  ├─ index.html
-│  ├─ style.css
-│  ├─ script.js
-│  └─ assets/
-├─ lessons/              # Task sheets (read-only)
-│  ├─ 01-html-basics.md
-│  ├─ 02-css-basics.md
-│  ├─ 03-semantic-responsive.md
-│  ├─ 04-js-basics.md
-│  ├─ 05-interactivity.md
-│  └─ 06-final-project.md
-├─ snippets/             # Example solutions (optional)
-│  ├─ 01-html-basics.html
-│  ├─ 02-css-basics.css
-│  ├─ 03-nav-and-responsive.html
-│  ├─ 04-js-basics.js
-│  └─ 05-interactivity.js
-├─ checklist.md          # Detailed progress checklist
-└─ .github/workflows/deploy-pages.yml  # Optional: GitHub Pages CI
+futureinnovators/
+├── starter/
+│   ├── index.html
+│   ├── style.css
+│   └── script.js
+├── lessons/
+│   ├── 01-html-basics.md
+│   ├── 02-css-basics.md
+│   ├── 03-semantic-responsive.md
+│   ├── 04-js-basics.md
+│   ├── 05-stretch-ideas.md
+├── snippets/
+│   ├── 01-html-basics.html
+│   ├── 02-css-basics.css
+│   ├── 03-nav-and-responsive.html
+│   ├── 04-js-basics.js
+├── checklist.md
+├── LICENSE
+└── README.md
 ```
 
 ## Quick Start
@@ -43,8 +41,8 @@ web-foundations/
 - **Accessibility**: Screen reader (NVDA/VoiceOver), browser devtools.
 
 ## Run locally
-- Option A: Open `starter/index.html` directly in your browser.
-- Option B: Use VS Code **Live Server** to auto-reload on changes.
+- Option A: Open Terminal and go to your `starter/index.html` file by typing in `cd starter` in the terminal. Then run `python3 -m http.server 8000` and click the button to open the website in your browser.
+- Option B: Deploy the repo onto GitHub Pages (found in Settings -> Pages in your repo).
 
 ## Deploy with GitHub Pages (optional)
 1. Create a new GitHub repo (e.g., `web-foundations`).
