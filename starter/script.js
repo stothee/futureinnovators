@@ -1,9 +1,5 @@
 
 // Set the current year in the footer
-const year = document.getElementById('year');
-if (year) {
-  year.textContent = new Date().getFullYear();
-}
 
 // Show/hide the menu on small screens
 const navBtn = document.querySelector('.nav-toggle');

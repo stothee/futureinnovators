@@ -1,4 +1,3 @@
-
 # Lesson 01 — HTML Basics
 
 **Goal:** Build the skeleton of your page and practice core HTML elements.

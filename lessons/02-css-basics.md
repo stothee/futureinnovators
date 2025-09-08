@@ -1,20 +1,22 @@
-
 # Lesson 02 — CSS Basics
 
-**Goal:** Style text, colours, and the box model. Build a simple navigation layout.
+**Goal:** Learn what CSS is and how to use it to change the look of your web page.
 
 ## Tasks
-1. Change the background colour of the navigation bar (remember to set classes!)
-2. Set base typography for `body` and create clear hierarchy for headings.
-3. Choose a colour palette for backgrounds and text; check contrast.
-4. Practice margin, padding, and border on a `card` or `section`.
-5. Create a simple `nav` bar; style links and hover/focus states.
-6. Use Flexbox to space nav links.
+1. Change the background color of the whole page. (Hint: use the `body` selector)
+2. Change the color of the text on your page.
+3. Make the navigation bar a different color from the rest of the page.
+4. Make the main heading (`h1`) bigger than the other text.
+5. Add some space (padding) inside the navigation bar and between sections.
+6. Make the links in the navigation bar change color when you move your mouse over them.
+7. Make the button in the form a different color, and change color when you hover over it.
 
 ## Success Criteria
-- Consistent typography.
-- Clear visual separation using spacing and borders.
-- Keyboard focus visible on links.
+- The background and text colors are different.
+- The navigation bar stands out from the rest of the page.
+- The main heading is easy to see.
+- There is space between sections and inside the navigation bar.
+- Links and buttons change color when hovered.
 
 ## Example Snippet (optional)
 See `snippets/02-css-basics.css`.
