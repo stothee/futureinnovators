@@ -56,9 +56,9 @@
   </main>
 
 
-  <section id="ai-chat" style="max-width:400px;margin:2rem auto 3rem auto;padding:1rem;background:#f8fafc;border-radius:12px;box-shadow:0 2px 8px rgba(95,108,175,0.08);">
+  <section id="ai-chat" style="max-width:700px;width:100%;margin:2rem auto 3rem auto;padding:1.5rem;background:#f8fafc;border-radius:12px;box-shadow:0 2px 8px rgba(95,108,175,0.08);">
     <h2 style="text-align:center;margin-bottom:1rem;">AI Chat</h2>
-    <div id="chat" style="height:220px;overflow-y:auto;background:#fff;border:1px solid #e0c3fc;border-radius:8px;padding:0.75rem 0.5rem 0.5rem 0.5rem;margin-bottom:0.75rem;font-size:1rem;color:#22223b;"></div>
+  <div id="chat" style="height:400px;overflow-y:auto;background:#fff;border:1px solid #e0c3fc;border-radius:8px;padding:0.75rem 0.5rem 0.5rem 0.5rem;margin-bottom:0.75rem;font-size:1rem;color:#22223b;"></div>
     <div style="display:flex;gap:0.5rem;">
       <input id="user-input" type="text" placeholder="Type a message..." style="flex:1;padding:0.5rem;border-radius:6px;border:1px solid #5f6caf;font-size:1rem;" onkeydown="if(event.key==='Enter'){sendMessage()}" />
       <button onclick="sendMessage()" style="background:#5f6caf;color:#fff;border:none;padding:0.5rem 1.2rem;border-radius:6px;font-weight:bold;cursor:pointer;">Send</button>
@@ -79,7 +79,7 @@
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           messages: [
-            { role: 'system', content: 'You are a helpful assistant.' },
+            { role: 'system', content: 'You are an AI chef. Only provide useful information related to cooking. If I ask for anything else, reply with a cooking joke instead.' },
             { role: 'user', content: userInput }
           ]
         })
