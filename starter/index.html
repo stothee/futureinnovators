@@ -85,8 +85,8 @@
         })
       });
 
-      const data = await response.json();
-  chat.innerHTML += `<div style='margin-bottom:0.7rem;text-align:right;'><strong>Bot:</strong> ${data.choices[0].message.content}</div>`;
+      const data = await response;
+  chat.innerHTML += `<div style='margin-bottom:0.7rem;text-align:right;'><strong>Agent:</strong> ${data}</div>`;
       chat.scrollTop = chat.scrollHeight;
     }
   </script>
