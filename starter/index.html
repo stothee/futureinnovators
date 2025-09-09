@@ -85,7 +85,7 @@
         })
       });
 
-      const data = await response;
+      const data = await response.text();
   chat.innerHTML += `<div style='margin-bottom:0.7rem;text-align:right;'><strong>Agent:</strong> ${data}</div>`;
   console.log(data);
       chat.scrollTop = chat.scrollHeight;
