@@ -1,0 +1,172 @@
+<!-- Sample: Project Cards with Modal & Theme Toggle (Stretch Ideas) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Stretch Ideas Sample</title>
+	<style>
+		:root {
+			--bg: #fff;
+			--text: #111;
+			--accent: #06b6d4;
+			--card-bg: #f7fafc;
+			--modal-bg: rgba(0,0,0,0.6);
+		}
+		[data-theme="dark"] {
+			--bg: #18181b;
+			--text: #f3f4f6;
+			--card-bg: #23272f;
+		}
+		body {
+			background: var(--bg);
+			color: var(--text);
+			font-family: 'Segoe UI', Arial, sans-serif;
+			margin: 0;
+			min-height: 100vh;
+			transition: background 0.2s, color 0.2s;
+		}
+		.theme-toggle {
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+			background: var(--accent);
+			color: #fff;
+			border: none;
+			border-radius: 20px;
+			padding: 0.5rem 1.2rem;
+			font-size: 1rem;
+			cursor: pointer;
+			font-weight: bold;
+			transition: background 0.2s;
+		}
+		.theme-toggle:hover {
+			background: #0ea5e9;
+		}
+		.projects {
+			display: flex;
+			gap: 2rem;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 3rem 0;
+		}
+		.card {
+			background: var(--card-bg);
+			border: 1px solid var(--text);
+			border-radius: 12px;
+			box-shadow: 0 2px 8px #0001;
+			padding: 1.5rem;
+			width: 260px;
+			text-align: left;
+			position: relative;
+		}
+		.card h3 {
+			margin-top: 0;
+		}
+		.card button {
+			background: var(--accent);
+			color: #fff;
+			border: none;
+			border-radius: 16px;
+			padding: 0.4rem 1rem;
+			font-size: 1rem;
+			cursor: pointer;
+			margin-top: 1rem;
+			transition: background 0.2s;
+		}
+		.card button:hover {
+			background: #0ea5e9;
+		}
+		.modal {
+			display: none;
+			position: fixed;
+			top: 0; left: 0; right: 0; bottom: 0;
+			background: var(--modal-bg);
+			align-items: center;
+			justify-content: center;
+			z-index: 1000;
+		}
+		.modal.active {
+			display: flex;
+		}
+		.modal-content {
+			background: var(--bg);
+			color: var(--text);
+			padding: 2rem 1.5rem;
+			border-radius: 12px;
+			max-width: 350px;
+			box-shadow: 0 4px 24px #0003;
+			text-align: center;
+			position: relative;
+		}
+		.close-modal {
+			position: absolute;
+			top: 0.5rem;
+			right: 0.5rem;
+			background: none;
+			border: none;
+			font-size: 1.5rem;
+			color: var(--text);
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<button class="theme-toggle" id="themeToggle">Toggle Theme</button>
+	<main>
+		<h2>My Projects</h2>
+		<div class="projects">
+			<div class="card">
+				<h3>Weather App</h3>
+				<p>See the weather in your city. Built with HTML, CSS, JS.</p>
+				<button class="open-modal" data-modal="modal1">Details</button>
+			</div>
+			<div class="card">
+				<h3>Todo List</h3>
+				<p>Track your tasks and stay organized. Simple and clean UI.</p>
+				<button class="open-modal" data-modal="modal2">Details</button>
+			</div>
+		</div>
+		<!-- Modals -->
+		<div class="modal" id="modal1">
+			<div class="modal-content">
+				<button class="close-modal" aria-label="Close">&times;</button>
+				<h3>Weather App</h3>
+				<p>Shows current weather for any city using a free API. Responsive and accessible.</p>
+			</div>
+		</div>
+		<div class="modal" id="modal2">
+			<div class="modal-content">
+				<button class="close-modal" aria-label="Close">&times;</button>
+				<h3>Todo List</h3>
+				<p>Add, remove, and check off tasks. Data saved in browser local storage.</p>
+			</div>
+		</div>
+	</main>
+	<script>
+		// Theme toggle
+		const themeBtn = document.getElementById('themeToggle');
+		themeBtn.addEventListener('click', () => {
+			document.body.toggleAttribute('data-theme');
+		});
+		// Modal logic
+		document.querySelectorAll('.open-modal').forEach(btn => {
+			btn.addEventListener('click', function() {
+				const modal = document.getElementById(this.dataset.modal);
+				if (modal) modal.classList.add('active');
+			});
+		});
+		document.querySelectorAll('.close-modal').forEach(btn => {
+			btn.addEventListener('click', function() {
+				this.closest('.modal').classList.remove('active');
+			});
+		});
+		// Close modal on background click
+		document.querySelectorAll('.modal').forEach(modal => {
+			modal.addEventListener('click', function(e) {
+				if (e.target === modal) modal.classList.remove('active');
+			});
+		});
+	</script>
+</body>
+</html>

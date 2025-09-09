@@ -11,19 +11,26 @@ A hands-on, step-by-step curriculum that teaches **HTML, CSS, and JavaScript** b
 futureinnovators/
 ├── starter/
 │   ├── index.html
-│   ├── style.css
-│   └── script.js
+│   ├── script.js
+│   └── style.css
+├── completed/
+│   ├── index.html
+│   ├── script.js
+│   └── style.css
 ├── lessons/
 │   ├── 01-html-basics.md
 │   ├── 02-css-basics.md
-│   ├── 03-semantic-responsive.md
+│   ├── 03-responsive.md
 │   ├── 04-js-basics.md
 │   ├── 05-stretch-ideas.md
+│   └── 06-agent.md
 ├── snippets/
 │   ├── 01-html-basics.html
 │   ├── 02-css-basics.css
-│   ├── 03-nav-and-responsive.html
+│   ├── 03-responsive.html
 │   ├── 04-js-basics.js
+│   ├── 05-stretch-ideas.html
+│   └── 06-agent.html
 ├── checklist.md
 ├── LICENSE
 └── README.md
