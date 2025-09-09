@@ -55,6 +55,32 @@
     </section>
   </main>
 
+    <div id="chat"></div>
+  <input id="user-input" type="text" placeholder="Type a message..." />
+  <button onclick="sendMessage()">Send</button>
+  <script>
+    async function sendMessage() {
+      const userInput = document.getElementById('user-input').value;
+      if (!userInput) return;
+      document.getElementById('chat').innerHTML += `<div>You: ${userInput}</div>`;
+      document.getElementById('user-input').value = '';
+
+      const response = await fetch('https://futureinnovators-agentbackend.azurewebsites.net/api/CallOpenAI', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          messages: [
+            { role: 'system', content: 'You are a helpful assistant.' },
+            { role: 'user', content: userInput }
+          ]
+        })
+      });
+
+      const data = await response.json();
+      document.getElementById('chat').innerHTML += `<div>Bot: ${data.choices[0].message.content}</div>`;
+    }
+  </script>
+
   <footer class="site-footer">
     <small>&copy; <span id="year"></span> My Website</small>
   </footer>
