@@ -70,7 +70,7 @@
       const chat = document.getElementById('chat');
       const userInput = input.value.trim();
       if (!userInput) return;
-      chat.innerHTML += `<div style='margin-bottom:0.3rem;'><strong>You:</strong> ${userInput}</div>`;
+  chat.innerHTML += `<div style='margin-bottom:0.3rem;'><strong>You:</strong> ${userInput}</div>`;
       input.value = '';
       chat.scrollTop = chat.scrollHeight;
 
@@ -86,7 +86,7 @@
       });
 
       const data = await response.json();
-      chat.innerHTML += `<div style='margin-bottom:0.7rem;'><strong>Bot:</strong> ${data.choices[0].message.content}</div>`;
+  chat.innerHTML += `<div style='margin-bottom:0.7rem;text-align:right;'><strong>Bot:</strong> ${data.choices[0].message.content}</div>`;
       chat.scrollTop = chat.scrollHeight;
     }
   </script>
